@@ -55,8 +55,8 @@ export function ExtensionProvider(props) {
             themeInfo: themeInfo || {}
         }
 
+        context.cardInfo = {...cardInfo};
         if (type === 'card') {
-            context.cardInfo = {...cardInfo};
             delete context.cardInfo.extensionId;
         }
 
