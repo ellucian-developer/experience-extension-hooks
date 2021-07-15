@@ -45,6 +45,9 @@ export function ExtensionProvider(props) {
             setLoadingStatus: cardControl.setLoadingStatus
         }));
 
+        extensionControlValue.setPreventRemove = cardControl.setPreventRemove;
+        extensionControlValue.setPreventRemoveMessage = cardControl.setPreventRemoveMessage;
+
         const context = {
             experienceInfo: experienceInfoValue,
             userInfo: userInfo || {},
