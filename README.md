@@ -19,6 +19,17 @@ import { useCardInfo, useCache, useData } from '@ellucian/experience-extension-h
 ## Installation
 ` npm install @ellucian/experience-extension-hooks`
 
+__Note:__ You will need to add this to your webpack.config.js in the "For advanced scenarios ..."
+
+```
+    // this is needed for @ellucian/experience-extension-hooks
+    webpackConfig.module.rules.forEach( rule => {
+        if (rule.loader === 'babel-loader') {
+            rule.exclude = /node_modules\/(?!(@ellucian)\/)/
+        }
+    })
+```
+
 ## The Hooks
 ### Universal hooks
 
