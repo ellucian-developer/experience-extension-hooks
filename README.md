@@ -17,9 +17,11 @@ import { useCardInfo, useCache, useData } from '@ellucian/experience-extension-h
 ```
 
 ## Installation
-` npm install @ellucian/experience-extension-hooks`
+`npm install ellucian-developer/experience-extension-hooks`
 
-__Note:__ You will need to add this to your webpack.config.js in the "For advanced scenarios ..."
+### Edit webpack.config.js
+
+ You will need to add this to your webpack.config.js in the "For advanced scenarios ..."
 
 ```
     // this is needed for @ellucian/experience-extension-hooks
@@ -28,6 +30,30 @@ __Note:__ You will need to add this to your webpack.config.js in the "For advanc
             rule.exclude = /node_modules\/(?!(@ellucian)\/)/
         }
     })
+```
+
+### Use babel.config.js
+
+Rename .babelrc to bable.config.js and covert to JS syntax so that is looks like:
+
+```
+module.exports = {
+    presets: [
+        '@babel/preset-env',
+        '@babel/preset-react'
+    ],
+    plugins: [
+        '@babel/plugin-proposal-class-properties',
+        '@babel/transform-runtime'
+    ],
+    env: {
+        test: {
+            plugins: [
+                'rewire'
+            ]
+        }
+    }
+}
 ```
 
 ## The Hooks
