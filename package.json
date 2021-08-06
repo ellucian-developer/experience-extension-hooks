@@ -1,6 +1,6 @@
 {
     "name": "@ellucian/experience-extension-hooks",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Useful hooks to access the Extension properties using React Contexts",
     "license": "UNLICENSED",
     "main": "index",

@@ -31,10 +31,10 @@ export function ExtensionProvider(props) {
 
         if (type === 'page') {
             extensionInfoValue.basePath = pageInfo.basePath;
-            extensionInfoValue.mergedConfiguration = { ... experienceInfo.configuration, ... cardInfo.cardConfiguration };
+            extensionInfoValue.mergedConfiguration = { ... experienceInfo.configuration, ... cardInfo.configuration };
         } else if (type === 'card') {
             extensionInfoValue.extensionId = cardInfo.extensionId;
-            extensionInfoValue.mergedConfiguration = cardInfo.cardConfiguration;
+            extensionInfoValue.mergedConfiguration = cardInfo.configuration;
         }
 
         const extensionControlValue = Object.assign(extensionControl || (pageInfo ? {
@@ -61,7 +61,6 @@ export function ExtensionProvider(props) {
         }
 
         context.cardInfo = {...cardInfo};
-        context.cardInfo.configuration = cardInfo.cardConfiguration;
         if (type === 'card') {
             delete context.cardInfo.extensionId;
         }
