@@ -34,7 +34,7 @@ import { useCardInfo, useCache, useData } from '@ellucian/experience-extension-h
 
 ### Use babel.config.js
 
-Rename .babelrc to babel.config.js and covert to JS syntax so that is looks like:
+Rename .babelrc to babel.config.js and convert to JS syntax so that is looks like:
 
 ```
 module.exports = {
