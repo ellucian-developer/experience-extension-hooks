@@ -34,7 +34,7 @@ import { useCardInfo, useCache, useData } from '@ellucian/experience-extension-h
 
 ### Use babel.config.js
 
-Rename .babelrc to bable.config.js and covert to JS syntax so that is looks like:
+Rename .babelrc to babel.config.js and convert to JS syntax so that is looks like:
 
 ```
 module.exports = {
@@ -65,7 +65,7 @@ _note:_ Ellucian has an internal component type of Admin which is not available 
 
 * ### useCache
 ```javascript
-const { clear, getItme, removeItem, storeItem } = useCache();
+const { clear, getItem, removeItem, storeItem } = useCache();
 ```
 
 * ### useData
@@ -115,7 +115,7 @@ const { firstName, locale, roles, tenantId } = useUserInfo();
 ### Card and Page hooks
 * ### useThemeInfo
 ```javascript
-const { clear, getItme, removeItem, storeItem } = useThemeInfo();
+const { clear, getItem, removeItem, storeItem } = useThemeInfo();
 ```
 
 ### Card hooks
