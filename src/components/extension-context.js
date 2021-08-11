@@ -31,7 +31,7 @@ export function ExtensionProvider(props) {
 
         if (type === 'page') {
             extensionInfoValue.basePath = pageInfo.basePath;
-            extensionInfoValue.mergedConfiguration = { ... experienceInfo.configuration, ... cardInfo.configuration };
+            extensionInfoValue.mergedConfiguration = { ... extensionInfo.configuration, ... cardInfo.configuration };
         } else if (type === 'card') {
             extensionInfoValue.extensionId = cardInfo.extensionId;
             extensionInfoValue.mergedConfiguration = cardInfo.configuration;
