@@ -31,10 +31,9 @@ export function ExtensionProvider(props) {
 
         if (type === 'page') {
             extensionInfoValue.basePath = pageInfo.basePath;
-            extensionInfoValue.mergedConfiguration = { ... extensionInfo.configuration, ... cardInfo.configuration };
+            extensionInfoValue.configuration = extensionInfo.configuration;
         } else if (type === 'card') {
             extensionInfoValue.extensionId = cardInfo.extensionId;
-            extensionInfoValue.mergedConfiguration = cardInfo.configuration;
         }
 
         const extensionControlValue = Object.assign(extensionControl || (pageInfo ? {
@@ -51,6 +50,7 @@ export function ExtensionProvider(props) {
         extensionControlValue.setPreventRemoveMessage = cardControl.setPreventRemoveMessage;
 
         const context = {
+            cardInfo: {... cardInfo},
             experienceInfo: experienceInfoValue,
             userInfo: userInfo || {},
             extensionInfo: extensionInfoValue,
@@ -60,9 +60,11 @@ export function ExtensionProvider(props) {
             themeInfo: themeInfo || {}
         }
 
-        context.cardInfo = {...cardInfo};
         if (type === 'card') {
             delete context.cardInfo.extensionId;
+        } else if (type === 'page') {
+            context.cardInfo.configuration = cardInfo.cardConfiguration;
+            delete context.cardInfo.cardConfiguration;
         }
 
         return context;

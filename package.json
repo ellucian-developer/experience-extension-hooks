@@ -1,30 +1,20 @@
 {
     "name": "@ellucian/experience-extension-hooks",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Useful hooks to access the Extension properties using React Contexts",
-    "license": "UNLICENSED",
+    "license": "Apache-2.0",
     "main": "index",
     "files": [
         "index.js",
         "src"
     ],
-    "scripts": {
-        "lint": "eslint --ext .jsx,.js src"
-    },
+    "scripts": {},
     "peerDependencies": {
         "react": "16.9.0"
     },
     "devDependencies": {
-        "@calm/eslint-plugin-react-intl": "1.4.1",
-        "eslint": "7.25.0",
-        "eslint-plugin-import": "2.22.1",
-        "eslint-plugin-jest": "24.3.6",
-        "eslint-plugin-jsx-a11y": "6.4.1",
-        "eslint-plugin-react": "7.23.2",
-        "npm-run-all": "4.1.5",
+        "eslint": "^7.32.0",
         "react": "16.9.0"
     },
-    "dependencies": {
-        "babel-eslint": "10.1.0"
-    }
+    "dependencies": {}
 }

@@ -105,14 +105,13 @@ const { basePath, configuration, extensionId, type } = useExtensionInfo();
 ```
 _basePath_ is only used for Page and Admin components
 
-_configuration_ is only used for Page to convey extension configuration. **Note** for cards, the extension configuration is combined with the card configuration.
+_configuration_ is only used for Page to convey extension configuration. **Note** for cards, the extension configuration is combined with the card configuration in useCardInfo.
 
 * ### useUserInfo
 ```javascript
 const { firstName, locale, roles, tenantId } = useUserInfo();
 ```
 
-### Card and Page hooks
 * ### useThemeInfo
 ```javascript
 const { clear, getItem, removeItem, storeItem } = useThemeInfo();
