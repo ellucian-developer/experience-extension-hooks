@@ -36,15 +36,7 @@ export function ExtensionProvider(props) {
             extensionInfoValue.extensionId = cardInfo.extensionId;
         }
 
-        const extensionControlValue = Object.assign(extensionControl || (pageInfo ? {
-            navigateToPage: pageControl.navigateToPage,
-            setErrorMessage: pageControl.setErrorMessage,
-            setLoadingStatus: pageControl.setLoadingStatus
-        } : {
-            navigateToPage: cardControl.navigateToPage,
-            setErrorMessage: cardControl.setErrorMessage,
-            setLoadingStatus: cardControl.setLoadingStatus
-        }));
+        const extensionControlValue = Object.assign({}, extensionControl || (pageInfo ?  pageControl : cardControl));
 
         extensionControlValue.setPreventRemove = cardControl.setPreventRemove;
         extensionControlValue.setPreventRemoveMessage = cardControl.setPreventRemoveMessage;
