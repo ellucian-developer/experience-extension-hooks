@@ -86,18 +86,17 @@ _version_ is Dashboard version or Setup version for Admin components
 const {
     navigateToPage,
     setErrorMessage,
+    setExitPrompt,
     setLoadingStatus,
+    setPageTitle,
+    setPageToolbar
     setPreventRemove,
     setPreventRemoveMessage
 } = useExtensionControl();
 ```
-_navigateToPage_ is only used for Card and Page components
+_setExitPrompt_, _setPageTitle_, and _setPageToolbar_ are only used for Page components 
 
-_setErrorMessage_ and _setLoadingStatus_ work regardless of Component type. No need to use PageControl vs CardControl
-
-_setPreventRemove_ is only used for Card and Page components
-
-_setPreventRemoveMessage_ is only used for Card and Page components
+_setPreventRemove_, and _setPreventRemoveMessageare_ only used for Card components 
 
 * ### useExtensionInfo
 ```javascript
