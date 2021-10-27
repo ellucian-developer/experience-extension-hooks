@@ -113,7 +113,7 @@ const { firstName, locale, roles, tenantId } = useUserInfo();
 
 * ### useThemeInfo
 ```javascript
-const { clear, getItem, removeItem, storeItem } = useThemeInfo();
+const { dashboardBackgroundColor, primaryColor, secondaryColor, ctaColors } = useThemeInfo();
 ```
 
 ### Card hooks
